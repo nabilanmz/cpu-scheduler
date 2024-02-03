@@ -3,11 +3,12 @@ import java.util.ArrayList;
 public class SchedulerView {
 	public void printProcessDetails(ArrayList<Process> processes) {
 		// Display the table of processes and their details
-		System.out.println("\nProcess | Arrival Time | Burst Time | Completion Time | Turnaround Time | Waiting Time");
+		System.out.println(
+				"\nProcess\t| Arrival Time\t| Burst Time\t| Finishing Time\t| Turnaround Time\t| Waiting Time");
 		for (Process process : processes) {
-			System.out.println("P" + process.processId + "      | " + process.arrivalTime + "           | " +
-					process.burstTime + "        | " + process.completionTime + "             | " +
-					process.turnaroundTime + "            | " + process.waitingTime);
+			System.out.println("P" + process.processId + "\t| " + process.arrivalTime + "\t\t| " +
+					process.burstTime + "\t\t| " + process.completionTime + "\t\t\t| " +
+					process.turnaroundTime + "\t\t\t| " + process.waitingTime);
 		}
 	}
 
